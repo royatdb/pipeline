@@ -26,13 +26,10 @@ object Demo extends App{
       }
   }"""
 
-  (1 to 10).foreach{_ =>
-    println(s"INPUT: $input")
+  println(s"INPUT: $input")
 
-    val start = System.currentTimeMillis
-    val output = model.transform(input)
-    println(s"OUTPUT: $output")
-    println(s">>>> Time taken (ms): ${System.currentTimeMillis-start}")
-  }
+  val start = System.currentTimeMillis
+  val output = model.transform(input)
+  println(s"OUTPUT: $output")
 
 }

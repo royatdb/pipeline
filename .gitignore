@@ -3,3 +3,4 @@ project/target/*
 project/project/target/*
 target/*
 data/runs/*
+.DS_Store

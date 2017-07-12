@@ -19,16 +19,20 @@ object Demo extends App{
     "label":1.0,
     "features":
       {
-     	  "type":0,
+        "type":0,
       	"size":13,
       	"indices":[0,1,2,3,4,6,7,9,10,11,12],
       	"values":[70.0,1.0,4.0,130.0,322.0,2.0,109.0,2.4,2.0,3.0,3.0]
       }
   }"""
 
-  println(s"INPUT: $input")
+  (1 to 10).foreach{_ =>
+    println(s"INPUT: $input")
 
-  val output = model.transform(input)
-  println(s"OUTPUT: $output")
+    val start = System.currentTimeMillis
+    val output = model.transform(input)
+    println(s"OUTPUT: $output")
+    println(s">>>> Time taken (ms): ${System.currentTimeMillis-start}")
+  }
 
 }
